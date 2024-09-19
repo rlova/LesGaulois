@@ -6,10 +6,6 @@ public class Gaulois {
 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
 	}
 
-	public static void main(String[] args) {
-
-	}
-
 	public String getNom() {
 		return nom;
 	}
