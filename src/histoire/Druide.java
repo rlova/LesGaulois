@@ -5,14 +5,16 @@ import java.util.Random;
 public class Druide {
 	private int forcePotion = 1;
 	private int effetPotionMax;
-	
-	public Druide(int effetPotionMax) {
+	private int effetPotionMin;
+
+	public Druide(int effetPotionMax, int effetPotionMin) {
 		this.effetPotionMax = effetPotionMax;
+		this.effetPotionMin = effetPotionMin;
 	}
 
 	public void preparerPotion () {
 		Random random = new Random();
-		forcePotion = random.nextInt(effetPotionMax);
+		forcePotion = random.nextInt(effetPotionMax - effetPotionMin);
 		if (forcePotion > 7) {
 			System.out.println(" J'ai préparé une super potion de force " + forcePotion);
 		} else {
@@ -20,8 +22,12 @@ public class Druide {
 		}
 	}
 	
+	public int getForcePotion() {
+		return forcePotion;
+	}
+
 	public static void main(String[] args) {
-		Druide panoramix = new Druide(10);
+		Druide panoramix = new Druide(5,10);
 		panoramix.preparerPotion();
 	}
 }
