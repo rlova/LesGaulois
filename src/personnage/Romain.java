@@ -24,10 +24,16 @@ public class Romain {
 	public void recevoirCoup(int forceCoup) {
 		force -= forceCoup;
 		if (force > 0) {
-			parler("AÃ¯e");
+			parler("Aïe");
 		} else {
 			parler("J'abondonne...");
 		}
 	}
-
+	
+	public static void main(String[] args) {
+		Romain romain = new Romain ("Romain",4);
+		System.out.println(romain.prendreParole());
+		romain.parler("Bonjour");
+		romain.recevoirCoup(5);
+	}
 }
