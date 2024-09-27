@@ -15,11 +15,11 @@ public class Scenario {
 		Romain minus = new Romain("Minus",6);
 		Gaulois obelix = new Gaulois("Obelix",25);
 		panoramix.booster(obelix);
+		obelix.parler("Par Bélénos, ce n'est pas juste !");
 		System.out.print("Le gaulois Asterix : <<");
 		asterix.boirePotion(6);		
 		asterix.parler("Bonjour");		
 		minus.parler("UN GAU... UN GAUGAU...");		
-		asterix.frapper(minus);	
 		minus.parler("J'abandonne...");	
 	}
 }
