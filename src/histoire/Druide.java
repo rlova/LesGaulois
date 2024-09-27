@@ -7,9 +7,9 @@ public class Druide {
 	private int effetPotionMax;
 	private int effetPotionMin;
 
-	public Druide(int effetPotionMax, int effetPotionMin) {
-		this.effetPotionMax = effetPotionMax;
+	public Druide(int effetPotionMin, int effetPotionMax) {
 		this.effetPotionMin = effetPotionMin;
+		this.effetPotionMax = effetPotionMax;
 	}
 
 	public void preparerPotion () {
@@ -18,7 +18,7 @@ public class Druide {
 		if (forcePotion > 7) {
 			System.out.println(" J'ai préparé une super potion de force " + forcePotion);
 		} else {
-			System.out.println(" Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force " + forcePotion);
+			System.out.println("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force " + forcePotion);
 		}
 	}
 	
@@ -28,6 +28,8 @@ public class Druide {
 
 	public static void main(String[] args) {
 		Druide panoramix = new Druide(5,10);
-		panoramix.preparerPotion();
+		for (int i=0; i<5; i++) {
+			panoramix.preparerPotion();
+		}
 	}
 }
