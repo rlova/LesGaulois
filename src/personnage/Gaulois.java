@@ -10,6 +10,11 @@ public class Gaulois {
 		this.force = force;
 	}
 
+	public void boirePotion (int forcePotion) {
+		forcePotion = effetPotion;
+		System.out.println(" Merci Druide, je sens que ma force est " + forcePotion + " fois décuplée. ");
+	}
+	
 	public String getNom() {
 		return nom;
 	}
@@ -33,7 +38,7 @@ public class Gaulois {
 	}
 
 	public static void main(String[] args) {
-		Gaulois asterix = new Gaulois ("Ast�rix",8);
+		Gaulois asterix = new Gaulois ("Ast�rix",8);
 		System.out.println(asterix);
 		System.out.println(asterix.prendreParole());
 		asterix.parler("Bonjour");
