@@ -10,7 +10,7 @@ public class Scenario {
 		Gaulois asterix = new Gaulois("Asterix",8);
 		Romain minus = new Romain("Minus",6);
 		Gaulois obelix = new Gaulois("Obelix",25);
-		System.out.println(" Le druide Panoramix : << Bonjour, je suis le druide Panoramix et ma potion peut aller d'une force 5 à 10. >>");
+		System.out.println(" Le druide Panoramix : << Bonjour, je suis le druide Panoramix et ma potion peut aller d'une force " + panoramix.geteffetPotionMin() + " à " + + " >>");
 		System.out.println(" Le druide Panoramix : << Je vaus aller préparer une petite potion... >>");
 		System.out.print(" Le druide Panoramix : ");
 		panoramix.preparerPotion();

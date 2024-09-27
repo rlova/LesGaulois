@@ -30,6 +30,14 @@ public class Druide {
 		}
 	}
 	
+	public int getEffetPotionMax() {
+		return effetPotionMax;
+	}
+
+	public int getEffetPotionMin() {
+		return effetPotionMin;
+	}
+
 	public int getForcePotion() {
 		return forcePotion;
 	}
