@@ -2,6 +2,8 @@ package histoire;
 
 import java.util.Random;
 
+import personnage.Gaulois;
+
 public class Druide {
 	private int forcePotion = 1;
 	private int effetPotionMax;
@@ -12,6 +14,12 @@ public class Druide {
 		this.effetPotionMax = effetPotionMax;
 	}
 
+	public void booster(Gaulois gaulois) {
+		if (gaulois.getNom() == "Obelix") {
+			System.out.println(" Non, Obélix !... Tu n'auras pas de potion magique!");
+		}
+	}
+	
 	public void preparerPotion () {
 		Random random = new Random();
 		forcePotion = random.nextInt(effetPotionMax - effetPotionMin);
