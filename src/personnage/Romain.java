@@ -42,5 +42,7 @@ public class Romain {
 		System.out.println(minus.prendreParole());
 		minus.parler("Bonjour");
 		minus.recevoirCoup(5);
+		System.out.println(Equipement.CASQUE);
+		System.out.println(Equipement.BOUCLIER);
 	}
 }
