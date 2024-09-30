@@ -23,9 +23,12 @@ public class Romain {
 	}
 	
 	public void recevoirCoup(int forceCoup) {
+//		Pré-condition
 		assert force > 0 : "La force d'un Romain est positive";
+//		Variable locale post-condition
 		int forcePost = force;
 		force -= forceCoup;
+//		Post-condition
 		assert force < forcePost : "La force d'un Romain a diminué";
 		if (force > 0) {
 			parler("Aie");
