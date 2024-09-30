@@ -3,7 +3,7 @@ package personnage;
 public class Village {
 	private String nom;
 	private Chef chef;
-	private int[] villageois;
+	private Gaulois[] villageois;
 	private int nbVillageois;
 	
 	public Village(String nom, int nbVillageoisMaximum) {
@@ -17,8 +17,11 @@ public class Village {
 		nbVillageois++;
 	}
 	
-	public static void trouverHabitant(int numeroVillageois) {
-		return villageois[numeroVillageois];
+	public Gaulois trouverHabitant(int numeroVillageois) {
+		if (numeroVillageois>=0 && numeroVillageois<nbVillageois) {
+			return villageois[numeroVillageois];
+		}
+		return null;
 	}
 	
 	public void setChef(Chef chef) {
@@ -36,7 +39,10 @@ public class Village {
 		village.setChef(abraracourix);
 		Gaulois asterix = new Gaulois("Asterix",6);
 		village.ajouterHabitant(asterix);
-		Gaulois gaulois = village.trouverHabitant(1);
+		Gaulois gaulois = village.trouverHabitant(0);
 		System.out.println(gaulois);
 	}
 }
+
+// Je n'arrivais pas sortir l'habitant numéro 0 j'ai donc essayé de le mettre entre les deux intervalles (cad que le num doit être entre 0 et le nb d'habitant)
+// Cela renvoie donc un resultat null, c'est pourquoi j'ai précisé que le numéro peut être égale à 0 et on obtient l'habtant'
