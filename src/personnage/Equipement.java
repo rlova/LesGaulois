@@ -8,6 +8,9 @@ public enum Equipement {
 	private Equipement(String nom) {
 		this.nom = nom;
 	}
-	
+	@Override
+	public String toString() {
+		return nom;
+	}
 	
 }
