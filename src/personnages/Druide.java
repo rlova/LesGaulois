@@ -7,7 +7,7 @@ public class Druide {
 	private int forcePotion = 1;
 	private int effetPotionMax;
 	private int effetPotionMin;
-	private Random random = new Random();
+	private Random valeur = new Random();
 
 	public Druide(String nom, int effetPotionMin, int effetPotionMax) {
 		this.nom = nom;
@@ -35,7 +35,7 @@ public class Druide {
 	}
 	
 	public int preparerPotion () {
-		forcePotion = this.random.nextInt(effetPotionMax,effetPotionMin);
+		forcePotion = this.valeur.nextInt(effetPotionMin,effetPotionMax);
 		return forcePotion;
 	}
 

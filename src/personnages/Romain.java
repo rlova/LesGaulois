@@ -34,7 +34,7 @@ public class Romain {
 		System.out.println(SOLDAT + getNom() + " s'equipe avec un bouclier");
 	}
 	
-	private void sEquiper(Equipement equipement) {
+	public void sEquiper(Equipement equipement) {
 		switch (nbEquipement) {
 			case 2 :
 				System.out.println(SOLDAT + getNom() + " est\tdeja\tprotege !");
