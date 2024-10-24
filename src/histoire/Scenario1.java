@@ -3,7 +3,7 @@ package histoire;
 import personnage.Gaulois;
 import personnage.Romain;
 
-public class Scenario {
+public class Scenario1 {
 	public static void main(String[] args) {
 		Druide panoramix = new Druide(5,10);
 		System.out.println("Le druide Panoramix : << Bonjour, je suis le druide Panoramix et ma potion peut aller d'une force " + panoramix.getEffetPotionMin() + " à " + panoramix.getEffetPotionMax() + " >>");
