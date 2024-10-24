@@ -19,7 +19,15 @@ public class Romain {
 	public String getNom() {
 		return nom;
 	}
-	
+		
+	public int getForce() {
+		return force;
+	}
+
+	public void setForce(int force) {
+		this.force = force;
+	}
+
 	public void ajouterEquipement(Equipement equipements2) {
 		equipements[nbEquipement] = equipements2;
 		nbEquipement++;
@@ -31,7 +39,6 @@ public class Romain {
 			case 2 :
 				System.out.println(SOLDAT + getNom() + " est\tdeja\tprotege !");
 				break;
-			
 			case 1:
 				if (equipements[0] == equipement) {
 					System.out.println(SOLDAT + getNom() + " possede\tdeja\tun\tcasque !");
@@ -39,9 +46,9 @@ public class Romain {
 					ajouterEquipement(equipement);
 				}
 				break;
-			
-			case 0:
+			default:
 				ajouterEquipement(equipement);
+				break;
 		}
 	}
 	
@@ -78,7 +85,7 @@ public class Romain {
 		texte = "Ma force est de " + this.force + ", et la force du coup est de " + forceCoup;
 		int resistanceEquipement = 0;
 		if (nbEquipement != 0) {
-			texte += "\nMais heureusement, grace � mon �quipement sa force est diminu� de ";
+			texte = texte+ "\nMais heureusement, grace � mon �quipement sa force est diminu� de ";
 			int i = 0; 
 			while (i++ < nbEquipement) {
 				if ((equipements[i] != null && equipements[i].equals(Equipement.BOUCLIER))) {
