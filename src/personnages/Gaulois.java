@@ -1,4 +1,4 @@
-package personnage;
+package personnages;
 
 public class Gaulois {
 	private String nom;
@@ -31,7 +31,7 @@ public class Gaulois {
 	}
 	
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
+		System.out.println(nom + " envoie un grand coup dans la mï¿½choire de " + romain.getNom());
 		Equipement[] newTrophees = romain.recevoirCoup((force / 3) *effetPotion);
 		for (int i = 0; newTrophees != null && i < trophees.length; i++,nbTrophees++) {
 			this.trophees[nbTrophees] = trophees[i];

@@ -1,4 +1,4 @@
-package personnage;
+package personnages;
 
 public class Romain {
 	private static final String String = null;
@@ -55,7 +55,7 @@ public class Romain {
 	
 	public Equipement[] recevoirCoup(int forceCoup) {
 		Equipement[] equipementEjecte = null;
-		// précondition
+		// prï¿½condition
 		assert force > 0;
 		int oldForce = force;
 		
@@ -63,7 +63,7 @@ public class Romain {
 		
 		force -= forceCoup;
 		if (force > 0) {
-			parler("Aïe");
+			parler("Aï¿½e");
 		} else {
 			equipementEjecte = ejecterEquipement();
 			parler("J'abandonne...");
@@ -78,7 +78,7 @@ public class Romain {
 		texte = "Ma force est de " + this.force + ", et la force du coup est de " + forceCoup;
 		int resistanceEquipement = 0;
 		if (nbEquipement != 0) {
-			texte += "\nMais heureusement, grace à mon équipement sa force est diminué de ";
+			texte += "\nMais heureusement, grace ï¿½ mon ï¿½quipement sa force est diminuï¿½ de ";
 			int i = 0; 
 			while (i++ < nbEquipement) {
 				if ((equipements[i] != null && equipements[i].equals(Equipement.BOUCLIER))) {
@@ -97,7 +97,7 @@ public class Romain {
 	
 	private Equipement[] ejecterEquipement() {
 		Equipement[] equipementEjecte = new Equipement[nbEquipement];
-		System.out.println("L'équipement de " + nom + "s'envole sous la force du coup.");
+		System.out.println("L'ï¿½quipement de " + nom + "s'envole sous la force du coup.");
 		int nbEquipementEjecte = 0;
 		for (int i = 0; i < nbEquipement; i++) {
 			if (equipements[i] != null) {

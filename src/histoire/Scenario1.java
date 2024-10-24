@@ -1,7 +1,7 @@
 package histoire;
 
-import personnage.Gaulois;
-import personnage.Romain;
+import personnages.Gaulois;
+import personnages.Romain;
 
 public class Scenario1 {
 	public static void main(String[] args) {

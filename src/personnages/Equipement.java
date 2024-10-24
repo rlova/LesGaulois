@@ -1,4 +1,4 @@
-package personnage;
+package personnages;
 
 public enum Equipement {
 	CASQUE("casque"),

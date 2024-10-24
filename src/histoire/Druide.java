@@ -2,7 +2,7 @@ package histoire;
 
 import java.util.Random;
 
-import personnage.Gaulois;
+import personnages.Gaulois;
 
 public class Druide {
 	private int forcePotion = 1;
