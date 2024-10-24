@@ -48,21 +48,21 @@ public class Druide {
 		}
 	}
 
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
-	public int getEffetPotionMax() {
-		return effetPotionMax;
-	}
-
-	public int getEffetPotionMin() {
-		return effetPotionMin;
-	}
-
-	public int getForcePotion() {
-		return forcePotion;
-	}
+//	public void setNom(String nom) {
+//		this.nom = nom;
+//	}
+//
+//	public int getEffetPotionMax() {
+//		return effetPotionMax;
+//	}
+//
+//	public int getEffetPotionMin() {
+//		return effetPotionMin;
+//	}
+//
+//	public int getForcePotion() {
+//		return forcePotion;
+//	}
 
 	public static void main(String[] args) {
 		Druide panoramix = new Druide("Panoramix",5,10);
