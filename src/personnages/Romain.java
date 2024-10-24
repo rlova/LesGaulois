@@ -72,7 +72,8 @@ public class Romain {
 		if (force > 0) {
 			parler("A�e");
 		} else {
-			equipementEjecte = ejecterEquipement();
+//			equipementEjecte = ejecterEquipement();
+			ejecterEquipement();
 			parler("J'abandonne...");
 		}
 		// post condition la force a diminuee
