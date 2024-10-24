@@ -30,7 +30,7 @@ public class Druide {
 		System.out.println(prendreParole() + "<< " + texte + " >>");
 	}
 	
-	private String prendreParole() {
+	public String prendreParole() {
 		return "Le druide " + nom + " : ";
 	}
 	
