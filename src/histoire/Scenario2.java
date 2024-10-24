@@ -6,8 +6,7 @@ import personnages.Gaulois;
 import personnages.Romain;
 import villagegaulois.Musee;
 
-public class Scenario {
-
+public class Scenario2 {
 	public static void main(String[] args) {
 		Druide druide = new Druide("Panoramix", 5, 10);
 		druide.parler("Je vais aller préparer une petite potion...");
@@ -38,5 +37,4 @@ public class Scenario {
 //		asterix.faireUneDonnation(musee);
 
 	}
-
 }
