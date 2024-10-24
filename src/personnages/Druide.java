@@ -1,8 +1,6 @@
-package histoire;
+package personnages;
 
 import java.util.Random;
-
-import personnages.Gaulois;
 
 public class Druide {
 	private int forcePotion = 1;

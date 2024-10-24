@@ -1,5 +1,6 @@
 package histoire;
 
+import personnages.Druide;
 import personnages.Gaulois;
 import personnages.Romain;
 
