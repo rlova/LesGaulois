@@ -72,8 +72,7 @@ public class Romain {
 		if (force > 0) {
 			parler("A�e");
 		} else {
-//			equipementEjecte = ejecterEquipement();
-			ejecterEquipement();
+			equipementEjecte = ejecterEquipement();
 			parler("J'abandonne...");
 		}
 		// post condition la force a diminuee
@@ -85,7 +84,7 @@ public class Romain {
 		String texte = "Ma force est de " + this.force + ", et la force du coup est de " + forceCoup;
 		int resistanceEquipement = 0;
 		if (nbEquipement != 0) {
-			texte += "\nMais heureusement, grace � mon �quipement sa force est diminu� de "; 
+			texte += "\nMais heureusement, grace a mon equipement sa force diminue de "; 
 			for (int i=0; i< nbEquipement; i++) {
 				if ((equipements[i] != null && equipements[i].equals(Equipement.BOUCLIER))) {
 					resistanceEquipement += 8;
