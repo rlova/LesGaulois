@@ -37,11 +37,11 @@ public class Romain {
 	public void sEquiper(Equipement equipement) {
 		switch (nbEquipement) {
 			case 2 :
-				System.out.println(SOLDAT + getNom() + " est\tdeja\tprotege !");
+				System.out.println(SOLDAT + getNom() + " est deja protege !");
 				break;
 			case 1:
 				if (equipements[0] == equipement) {
-					System.out.println(SOLDAT + getNom() + " possede\tdeja\tun\tcasque !");
+					System.out.println(SOLDAT + getNom() + " possede deja un casque !");
 				} else {
 					ajouterEquipement(equipement);
 				}
