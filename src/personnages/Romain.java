@@ -70,7 +70,7 @@ public class Romain {
 		
 		force -= forceCoup;
 		if (force > 0) {
-			parler("A�e");
+			parler("Aie");
 		} else {
 			equipementEjecte = ejecterEquipement();
 			parler("J'abandonne...");
