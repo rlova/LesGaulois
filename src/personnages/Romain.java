@@ -62,23 +62,38 @@ public class Romain {
 	
 	public Equipement[] recevoirCoup(int forceCoup) {
 		Equipement[] equipementEjecte = null;
-		// pr�condition
-		assert force > 0;
-		int oldForce = force;
-		
 		forceCoup = calculResistanceEquipement(forceCoup);
-		
 		force -= forceCoup;
-		if (force > 0) {
-			parler("Aie");
-		} else {
-			equipementEjecte = ejecterEquipement();
-			parler("J'abandonne...");
+		switch (force) {
+			case 0:
+				parler("Aïe");
+			default:
+				equipementEjecte = ejecterEquipement();
+				parler("J'abandonne...");
+				break;
 		}
-		// post condition la force a diminuee
-		assert force < oldForce;
 		return equipementEjecte;
 	}
+	
+//	public Equipement[] recevoirCoup(int forceCoup) {
+//		Equipement[] equipementEjecte = null;
+//		// pr�condition
+//		assert force > 0;
+//		int oldForce = force;
+//		
+//		forceCoup = calculResistanceEquipement(forceCoup);
+//		
+//		force -= forceCoup;
+//		if (force > 0) {
+//			parler("Aie");
+//		} else {
+//			equipementEjecte = ejecterEquipement();
+//			parler("J'abandonne...");
+//		}
+//		// post condition la force a diminuee
+//		assert force < oldForce;
+//		return equipementEjecte;
+//	}
 	
 	private int calculResistanceEquipement(int forceCoup) {
 		String texte = "Ma force est de " + this.force + ", et la force du coup est de " + forceCoup;
@@ -102,7 +117,7 @@ public class Romain {
 	
 	private Equipement[] ejecterEquipement() {
 		Equipement[] equipementEjecte = new Equipement[nbEquipement];
-		System.out.println("L'�quipement de " + nom + "s'envole sous la force du coup.");
+		System.out.println("L'equipement de " + nom.toString() + "s'envole sous la force du coup.");
 		int nbEquipementEjecte = 0;
 		for (int i = 0; i < nbEquipement; i++) {
 			if (equipements[i] != null) {

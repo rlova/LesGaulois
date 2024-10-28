@@ -27,15 +27,22 @@ public class Gaulois {
 	}
 	
 	private String prendreParole() {
-		return "Le gaulois " + nom + " : ";
+		String texte = "Le gaulois " + nom + " : ";
+		return texte;
 	}
 	
+//	private String prendreParole() {
+//		return "Le gaulois " + nom + " : ";
+//	}
+	
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie un grand coup dans la m�choire de " + romain.getNom());
+		System.out.println(nom + " envoie un grand coup dans la machoire de " + romain.getNom());
 		Equipement[] newTrophees = romain.recevoirCoup((force / 3) *effetPotion);
 		for (int i = 0; newTrophees != null && i < trophees.length; i++,nbTrophees++) {
 			this.trophees[nbTrophees] = trophees[i];
+//			this.trophees[nbTrophees] = newTrophees[i];
 		}
+		return;
 	}
 
 	public static void main(String[] args) {
