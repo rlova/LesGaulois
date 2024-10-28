@@ -41,6 +41,7 @@ public class Gaulois {
 		for (int i = 0; newTrophees != null && i < trophees.length; i++,nbTrophees++) {
 			this.trophees[nbTrophees] = trophees[i];
 		}
+		return;
 	}
 
 	public static void main(String[] args) {

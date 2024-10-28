@@ -64,11 +64,13 @@ public class Romain {
 		Equipement[] equipementEjecte = null;
 		forceCoup = calculResistanceEquipement(forceCoup);
 		force -= forceCoup;
-		if (force>0) {
-			parler("Aïe");
-		} else {
-			equipementEjecte = ejecterEquipement();
-			parler("J'abandonne...");
+		switch (force) {
+			case 0:
+				parler("Aïe");
+			default:
+				equipementEjecte = ejecterEquipement();
+				parler("J'abandonne...");
+				break;
 		}
 		return equipementEjecte;
 	}
