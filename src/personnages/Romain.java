@@ -31,7 +31,7 @@ public class Romain {
 	public void ajouterEquipement(Equipement equipements2) {
 		equipements[nbEquipement] = equipements2;
 		nbEquipement++;
-		System.out.println(SOLDAT + getNom() + " s'equipe avec un bouclier");
+		System.out.println(SOLDAT + getNom() + " s'equipe avec un " + equipements2);
 	}
 	
 	public void sEquiper(Equipement equipement) {
@@ -41,7 +41,7 @@ public class Romain {
 				break;
 			case 1:
 				if (equipements[0] == equipement) {
-					System.out.println(SOLDAT + getNom() + " possede deja un casque !");
+					System.out.println(SOLDAT + getNom() + " possede deja un " + equipement);
 				} else {
 					ajouterEquipement(equipement);
 				}
@@ -134,8 +134,8 @@ public class Romain {
 		System.out.println(minus.prendreParole());
 		minus.parler("Bonjour");
 		minus.recevoirCoup(5);
-		System.out.println(Equipement.CASQUE);
-		System.out.println(Equipement.BOUCLIER);
+//		System.out.println(Equipement.CASQUE);
+//		System.out.println(Equipement.BOUCLIER);
 		minus.sEquiper(Equipement.CASQUE);
 		minus.sEquiper(Equipement.CASQUE);
 		minus.sEquiper(Equipement.BOUCLIER);
