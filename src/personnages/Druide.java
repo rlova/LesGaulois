@@ -35,7 +35,7 @@ public class Druide {
 	}
 	
 	public int preparerPotion () {
-		forcePotion = this.valeur.nextInt(effetPotionMax-effetPotionMin+effetPotionMax);
+		forcePotion = this.valeur.nextInt(effetPotionMax-effetPotionMin+1)+effetPotionMin;
 		return forcePotion;
 	}
 

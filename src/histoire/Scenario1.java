@@ -5,6 +5,9 @@ import personnages.Gaulois;
 import personnages.Romain;
 
 public class Scenario1 {
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Druide panoramix = new Druide("Panoramix",5,10);
 		panoramix.parler("Je vais aller préparer une petite potion...");
@@ -20,6 +23,5 @@ public class Scenario1 {
 		asterix.parler("Bonjour");		
 		minus.parler("UN GAU... UN GAUGAU...");
 		asterix.frapper(minus);
-//		minus.parler("J'abandonne...");	
 	}
 }
