@@ -40,7 +40,6 @@ public class Gaulois {
 		Equipement[] newTrophees = romain.recevoirCoup((force / 3) *effetPotion);
 		for (int i = 0; newTrophees != null && i < trophees.length; i++,nbTrophees++) {
 			this.trophees[nbTrophees] = trophees[i];
-//			this.trophees[nbTrophees] = newTrophees[i];
 		}
 		return;
 	}
