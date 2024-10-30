@@ -1,7 +1,6 @@
 package personnages;
 
 public class Romain {
-	private static final String String = null;
 	private String nom;
 	private int force;
 	private Equipement[] equipements = new Equipement[2];
@@ -64,18 +63,18 @@ public class Romain {
 	public Equipement[] recevoirCoup(int forceCoup) {
 		Equipement[] equipementEjecte = null;
 //		Pre-condition
-		assert force > 0;
+		assert force > 0 : "La force du Romain doit être positive avant de recevoir un coup.";
 		int oldForce = force;
 		forceCoup = calculResistanceEquipement(forceCoup);
 		force -= forceCoup;
 		switch (force) {
-			case 0:
-				parler("Aïe");
-			default:
-				equipementEjecte = ejecterEquipement();
-				parler("J'abandonne...");
-				vainqueur = false;
-				break;
+		case 1:
+			parler("Aïe");
+			break;
+		default:
+			equipementEjecte = ejecterEquipement();
+			parler("J'abandonne...");
+			vainqueur = false;
 		}
 //		// post condition la force a diminuee
 		assert force < oldForce;
