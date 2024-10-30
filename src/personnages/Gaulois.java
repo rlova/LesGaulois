@@ -41,7 +41,20 @@ public class Gaulois {
 		for (int i = 0; newTrophees != null && i < trophees.length; i++,nbTrophees++) {
 			this.trophees[nbTrophees] = trophees[i];
 		}
-		return;
+	}
+	
+	public void faireUneDonnation(Musee musee) {
+		if (nbTrophees>0) {
+			StringBuilder annonce = new StringBuilder();
+			parler("Je donne au musee tous mes trophees");
+			for (int i=0; i<nbTrophees; i++) {
+				Equipement equipement = trophees[i];
+				musee.donnerTrophees(this, equipement);
+				System.out.print(annonce.toString());
+			}
+			trophees = new Equipement[100];
+			nbTrophees = 0;
+		}
 	}
 
 	public static void main(String[] args) {
