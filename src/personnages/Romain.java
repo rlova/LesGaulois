@@ -63,16 +63,15 @@ public class Romain {
 	public Equipement[] recevoirCoup(int forceCoup) {
 		Equipement[] equipementEjecte = null;
 //		Pre-condition
-		assert force > 0 : "La force du Romain doit être positive avant de recevoir un coup.";
 		int oldForce = force;
 		forceCoup = calculResistanceEquipement(forceCoup);
 		force -= forceCoup;
 		if (force==0) {
-		parler("Aïe");
-		}else {
+			parler("Aie");
+		} else {
 			equipementEjecte = ejecterEquipement();
 			parler("J'abandonne...");
-			vainqueur = false;
+//			vainqueur = false;
 		}
 //		// post condition la force a diminuee
 		assert force <= oldForce;
