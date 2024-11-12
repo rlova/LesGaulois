@@ -7,7 +7,7 @@ public class Musee {
 	public void donnerTrophees(Gaulois gaulois, Equipement equipement) {
 		if (nbTrophee<trophees.length) {
 			trophees[nbTrophee] = new Trophee(gaulois, equipement);
-			nbTrophee++;
+			nbTrophee += 1;
 		}
 	}
 }

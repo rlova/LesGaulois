@@ -67,17 +67,15 @@ public class Romain {
 		int oldForce = force;
 		forceCoup = calculResistanceEquipement(forceCoup);
 		force -= forceCoup;
-		switch (force) {
-		case 1:
-			parler("Aïe");
-			break;
-		default:
+		if (force==0) {
+		parler("Aïe");
+		}else {
 			equipementEjecte = ejecterEquipement();
 			parler("J'abandonne...");
 			vainqueur = false;
 		}
 //		// post condition la force a diminuee
-		assert force < oldForce;
+		assert force <= oldForce;
 		return equipementEjecte;
 	}
 	
@@ -118,6 +116,9 @@ public class Romain {
 		}
 		parler(texte);
 		forceCoup -= resistanceEquipement;
+		if (forceCoup<0) {
+			return 0;
+		}
 		return forceCoup;
 	}
 	
