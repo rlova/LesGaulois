@@ -60,6 +60,7 @@ public class Gaulois {
 		System.out.println(asterix);
 		asterix.parler("Bonjour");
 		asterix.boirePotion(5);
+		asterix.faireUneDonnation(null);
 	}
 
 }

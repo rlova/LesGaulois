@@ -6,7 +6,7 @@ public class Romain {
 	private Equipement[] equipements = new Equipement[2];
 	private int nbEquipement = 0;
 	public static final String SOLDAT = "Le soldat ";
-	private boolean vainqueur = true;
+//	private boolean vainqueur = true;
 	
 	public Romain(String nom, int force) {
 		if (force < 0) {
@@ -77,26 +77,6 @@ public class Romain {
 		assert force <= oldForce;
 		return equipementEjecte;
 	}
-	
-//	public Equipement[] recevoirCoup(int forceCoup) {
-//		Equipement[] equipementEjecte = null;
-//		// pr�condition
-//		assert force > 0;
-//		int oldForce = force;
-//		
-//		forceCoup = calculResistanceEquipement(forceCoup);
-//		
-//		force -= forceCoup;
-//		if (force > 0) {
-//			parler("Aie");
-//		} else {
-//			equipementEjecte = ejecterEquipement();
-//			parler("J'abandonne...");
-//		}
-//		// post condition la force a diminuee
-//		assert force < oldForce;
-//		return equipementEjecte;
-//	}
 	
 	private int calculResistanceEquipement(int forceCoup) {
 		String texte = "Ma force est de " + this.force + ", et la force du coup est de " + forceCoup;
